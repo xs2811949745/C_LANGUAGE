@@ -33,13 +33,13 @@ int vowel(char ch)		//	判断元音
 	}
 	return flag;
 }
-int HmsToS(int h, int m, int s)
+int HmsToS(int h, int m, int s)		//判断一共多少秒
 {
 	int end = h * 3600 + m * 60 + s;
 	return end;
 
 }
-void PrintTime(int c)
+void PrintTime(int c)         //打印出时间差
 {
 	int h = 0, m = 0, s;
 	s = c;
@@ -57,7 +57,7 @@ void PrintTime(int c)
 	printf("%02d:%02d:%02d\n", h, m, s);
 
 }
-int Narcissus(int a)
+int Narcissus(int a)				//判断是否是水仙花数
 {
 	int flag = 0;
 	int b = a / 100;
@@ -66,4 +66,56 @@ int Narcissus(int a)
 	if (a == b * b * b + c * c * c + d * d * d)
 		flag = 1;
 	return flag;
+}
+
+int find_same_string_num(char* str1, char* str2)		//返回相同字符串出现次数   ,只能用scanf输入
+{
+	int sum = 0;
+	while (strstr(str1, str2) != NULL)
+	{
+		
+		sum++;
+		str1 = strstr(str1, str2)+1;
+			while (*str1 != '\0')
+			{
+				if (*str1 == *str2)
+				{
+					break;
+				}
+				str1++;
+			}
+	}
+
+	return sum;
+}
+
+void del(int a[], int n, int i)  /*删除数组a中下标为i的元素*/
+{
+	for (int j = i; j < n; j++)
+	{
+		a[j] = a[j + 1];
+		
+	}
+	  
+}
+void PrintArr(int a[], int n)/*输出数组a的前n个元素*/
+{
+	int x;
+	for (x = 0; x <=n -1; x++)
+		printf("%d ", a[x]);
+	
+}
+void sort(int a[], int n) {
+	int i, j, t;
+	for (i = 0; i < n - 1; i++) {
+		for (j = i + 1; j < n; j++) {
+			if (a[i] > a[j]) {
+				//交换位置 
+				t = a[i];
+				a[i] = a[j];
+				a[j] = t;
+			}
+		}
+	}
+	return 0;
 }
