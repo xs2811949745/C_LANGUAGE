@@ -102,53 +102,53 @@
 //	printf("%c", ch);
 //	return 0;
 //}
-#include <stdio.h>
-void max_min(int a[], int n, int* pmax, int* pmin);
-int main()
-{
-	int arr[10];
-	int n,a;
-	scanf("%d", &n);
-	for (int i = 0; i < n; i++)
-	{
-		scanf("%d", &a);
-		arr[i] = a;
-	}
-	int* pmax=&arr[0], * pmin = &arr[n];
-	
-	max_min(arr, n, pmax, pmin);
-	printf("%d %d", *pmax, *pmin);
-	return 0;
-}
-void max_min(int a[], int n, int* pmax, int* pmin)
-{
-	
-	int count1 = 0;
-	for (int i = 0; i < n; i++)
-	{
-		if (*pmax <= *(pmax + count1))
-		{
-			*pmax = *(pmax + count1);
-		}
-		else
-		{
-			;
-		}
-		count1++;
-	}
-	int count = 0;
-	for (int i = n ; i >0; i--)
-	{
-		
-		if (*(pmin-count) <= *pmin)
-		{
-			*pmin = *(pmin - count);
-		}
-		else
-			;
-		count++;
-		
-	}
-
-	
-}
+//#include <stdio.h>
+//void max_min(int a[], int n, int* pmax, int* pmin);
+//int main()
+//{
+//	int arr[10];
+//	int n,a;
+//	scanf("%d", &n);
+//	for (int i = 0; i < n; i++)
+//	{
+//		scanf("%d", &a);
+//		arr[i] = a;
+//	}
+//	int* pmax=&arr[0], * pmin = &arr[n];
+//	
+//	max_min(arr, n, pmax, pmin);
+//	printf("%d %d", *pmax, *pmin);
+//	return 0;
+//}
+//void max_min(int a[], int n, int* pmax, int* pmin)
+//{
+//	
+//	int count1 = 0;
+//	for (int i = 0; i < n; i++)
+//	{
+//		if (*pmax <= *(pmax + count1))
+//		{
+//			*pmax = *(pmax + count1);
+//		}
+//		else
+//		{
+//			;
+//		}
+//		count1++;
+//	}
+//	int count = 0;
+//	for (int i = n ; i >0; i--)
+//	{
+//		
+//		if (*(pmin-count) <= *pmin)
+//		{
+//			*pmin = *(pmin - count);
+//		}
+//		else
+//			;
+//		count++;
+//		
+//	}
+//
+//	
+//}
