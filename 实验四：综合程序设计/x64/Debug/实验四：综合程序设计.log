@@ -1,0 +1,5 @@
+﻿  C_test_user.cpp
+D:\VS\实验四：综合程序设计\C_test_user.h(17,2): warning C4091: “typedef ”: 没有声明变量时忽略“students”的左侧
+D:\VS\实验四：综合程序设计\C_test_user.cpp(27,22): error C2664: “void scanf_students(students)”: 无法将参数 1 从“students [10000]”转换为“students”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(27,22): message : 无构造函数可以接受源类型，或构造函数重载决策不明确
+D:\VS\实验四：综合程序设计\C_test_user.h(22,6): message : 参见“scanf_students”的声明
