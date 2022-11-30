@@ -4,10 +4,14 @@
 #include <string.h>
 #include <windows.h>
 #include "C_test_user.h"
-extern students stu[10000];
-void menu()
+
+extern struct students stu[10000];
+extern struct students* p;
+extern int sz;
+
+int menu()
 {
-	printf("-----------菜单-----------");
+	printf("-----------菜单-----------\n");
 	printf("1、输入n个学生的信息\n");
 	printf("2、输入n个学生的信息\n");
 	printf("3、输入n个学生的信息\n");
@@ -19,23 +23,18 @@ void menu()
 	printf("--------------------------");
 	int choice;
 	scanf("%d", &choice);
-	while (choice != 8)
-	{
-		switch (choice)
-		{
-		case 1:
-			scanf_students(stu);
 
-		}
-	}
+	return choice;
+
 }
-void scanf_students(students stu[])
+
+void scanf_students(int sz,students *p)
 {
-	
 	int n;
-	scanf("%d", &n);
+	scanf("%d",&n);
 	for (int i = 0; i < n; i++)
 	{
-		scanf("%lf%s%d%d%d%d%d%d", &stu[i].id,&stu[i].name, &stu[i].year ,&stu[i].month, &stu[i].day, &stu[i].chinese, &stu[i].math, &stu[i].english);
+		scanf("%lf%s%d%d%d%d%d%d", &p, & p, & p, & p, & p, & p, & p, & p);
+		p++;
 	}
 }
