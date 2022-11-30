@@ -1,0 +1,16 @@
+﻿  C.test.cpp
+D:\VS\实验四：综合程序设计\C.test.cpp(18,2): warning C4091: “typedef ”: 没有声明变量时忽略“students”的左侧
+D:\VS\实验四：综合程序设计\C.test.cpp(31,23): error C2664: “void scanf_students(int,students *)”: 无法将参数 1 从“students *”转换为“int”
+D:\VS\实验四：综合程序设计\C.test.cpp(31,19): message : 没有使该转换得以执行的上下文
+D:\VS\实验四：综合程序设计\C_test_user.h(14,6): message : 参见“scanf_students”的声明
+  C_test_user.cpp
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%lf”需要类型“double *”的参数，但可变参数 1 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 2 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 3 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 4 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 5 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 6 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 7 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(37,9): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 8 拥有了类型“students **”
+D:\VS\实验四：综合程序设计\C_test_user.cpp(38,4): error C2036: “students *”: 未知的大小
+  正在生成代码...
