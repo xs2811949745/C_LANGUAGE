@@ -8,7 +8,7 @@
 
 
 
-int prime(int n);	//ËØÊıÅĞ¶Ï
+//int prime(int n);	//ËØÊıÅĞ¶Ï
 
 int vowel(char ch);	//	ÅĞ¶ÏÔªÒô
 
