@@ -34,13 +34,14 @@
 //{
 //	FILE* fp;
 //	fp = fopen("result.txt", "w+");
-//	int count = 0, count1 = 1;;
+//	int  count1 = 1;
 //	fprintf(fp, "第%d次计算练习及准确率如下：\n", count1);
 //	printf("计算练习，电脑随机生成5道题目\n");
 //	printf("十以内加、减、乘、除（四舍五入保留2位小数），请答题：\n");
 //		char judge='Y';
 //		while (judge == 'Y')
 //		{
+//			int count = 0;
 //			for (int i = 0; i < 5; i++)
 //			{
 //				double result;
@@ -96,7 +97,7 @@
 //					}
 //				}
 //			}
-//			printf("准确率为%d%%\n", count * 20);
+//			printf("准确率为%d%%\n", count *20);
 //			fprintf(fp, "准确率为%d%%\n", count * 20);
 //			printf("是否继续，如果是请输入Y，否则输入N\n");
 //			getchar();
@@ -108,6 +109,7 @@
 //				scanf("%c", &judge);
 //			}
 //			count1++;
+//			
 //		}
 //	return 0;
 //}
@@ -127,27 +129,99 @@
 //{
 //	return x / y;
 //}
+#include <stdio.h>
 int main()
 {
-	int sum=0;
-	int a[19],char b[11] = { 1,0,'X',9,8,7,6,5,4,3,2 };
-	for (int i = 0; i < 18; i++)
+	int sum = 0; int a, b, c, d, e, f, h, i, j, k, l, m, n, o, p, q, r; char g;
+	char str[11] = { 1,0,'x',9,8,7,6,5,4,3,2 };
+	char judge='Y';
+	while (judge == 'Y')
 	{
-		scanf("%1d", a[i]);
-		
+		scanf("%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%c", &a, &b, &c, &d, &e, &f,&h,&i,&j,&k,&l,&m,&n,&o,&p,&q,&r,&g);
 		getchar();
+		sum += (7 * a + 9 * b + 10 * c+ 5 * d + 8 * e + 4 * f + 2 *h + i + 6 * j + 3 * k + 7 * l + 9 * m + 10 * n + 5 * o + 8 * p  + 4 * q + 2 * r);
+		int end = sum % 11;
+		int y =h*1000+i*100+j*10+k , mo =l*10+m , ri =n*10+o ;
+		if (str[end] == g-48)
+			printf("correct,出生年月为：%d年%d月%d日\n", y, mo, ri);
+		else
+			printf("wrong\n");
+		printf("若继续请输入Y，否则输入N\n");
+		scanf("%c", &judge);
+		getchar();
+		while (judge != 'Y' && judge != 'N')
+		{
+			printf("请输入Y或N!\n");
+			scanf("%c", &judge);
+			getchar();
+		}
 	}
-	sum += 7 * a[0] + 9 * a[1] + 10 * a[2] + 5 * (a[3] - 48) + 8 * (a[4] - 48) + 4 * (a[5] - 48) + 2 * (a[6] - 48) + (a[7] - 48) + 6 * (a[8] - 48) + 3 * (a[9] - 48) + 7 * (a[10] - 48) + 9 * (a[11] - 48) + 10 * (a[12] - 48) + 5 * (a[13] - 48) + 8 * (a[14] - 48) + 4 * (a[15] - 48) + 2 * (a[16] - 48);
-	int end = sum % 11;
-	if (a[17] == b[end])
-	{
-		if (a[10] == 0 && a[12] == 0)
-			printf("出生年月为：%d%d%d%d年%d月%d日", a[6], a[7], a[8], a[9], a[11], a[13]);
-		if (a[10] == 0 && a[12] != 0)
-			printf("出生年月为：%d%d%d%d年%d月%d%d日", a[6], a[7], a[8], a[9], a[11],a[12], a[13]);
-		if (a[10] != 0 && a[12] == 0)
-			printf("出生年月为：%d%d%d%d年%d%d月%d日", a[6], a[7], a[8], a[9],a[10], a[11], a[12], a[13]);
-
-	}
-	return 0;
+		return 0;
 }
+//#include <stdio.h>
+//#include <string.h>
+//void sorted(char(*a)[15], int n);
+//void print(char(*a)[15], int n);
+//void search(char (*a)[15], int n);
+//int main()
+//{
+//	FILE* fp;
+//	fp = fopen( "city.txt", "r");
+//	char a[10][15];
+//	for (int i = 0; i < 10; i++)
+//	{
+//		fscanf(fp,"%s", &a[i]);
+//	}
+//	sorted(a, 10);
+//	print(a, 10);
+//	char judge;
+//	printf("是否需要查找城市，需要请输入Y，不需要请输入N\n");
+//	scanf("%c", &judge);
+//	if (judge == 'Y')
+//		search(a, 10);
+//	return 0;
+//}
+//void sorted(char(* a)[15], int n)
+//{
+//	char tem[15];
+//	for (int i = 0; i < 9; i++)
+//	{
+//		for (int j = 0; j < 9 - i; j++)
+//		{
+//			if (strcmp(a[j], a[j + 1]) >= 0)
+//			{
+//				strcpy(tem, a[j]);
+//				strcpy(a[j], a[j + 1]);
+//				strcpy(a[j + 1], tem);
+//			}
+//		}
+//	}
+//}
+//void print(char (*a)[15], int n)
+//{
+//	printf("%s", a[0]);
+//
+//	for (int i = 1; i < n; i++)
+//	{
+//		printf("\n%s", a[i]);
+//	}
+//	printf("\n");
+//}
+//void search(char (*a)[15], int n)
+//{
+//	int flag = 0;
+//	char str[15];
+//	printf("请输入所要查找的城市英文（首字母大写）\n");
+//	scanf("%s", str);
+//	for (int i = 0; i < 10; i++)
+//	{
+//		if (strcmp(str, a[i]) == 0)
+//		{
+//			printf("查到这个城市！");
+//			flag = 1;
+//
+//		}
+//	}
+//	if (flag == 0)
+//		printf("没有找到这个城市！\n");
+//}
