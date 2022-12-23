@@ -129,35 +129,35 @@
 //{
 //	return x / y;
 //}
-#include <stdio.h>
-int main()
-{
-	int sum = 0; int a, b, c, d, e, f, h, i, j, k, l, m, n, o, p, q, r; char g;
-	char str[11] = { 1,0,'x',9,8,7,6,5,4,3,2 };
-	char judge='Y';
-	while (judge == 'Y')
-	{
-		scanf("%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%c", &a, &b, &c, &d, &e, &f,&h,&i,&j,&k,&l,&m,&n,&o,&p,&q,&r,&g);
-		getchar();
-		sum += (7 * a + 9 * b + 10 * c+ 5 * d + 8 * e + 4 * f + 2 *h + i + 6 * j + 3 * k + 7 * l + 9 * m + 10 * n + 5 * o + 8 * p  + 4 * q + 2 * r);
-		int end = sum % 11;
-		int y =h*1000+i*100+j*10+k , mo =l*10+m , ri =n*10+o ;
-		if (str[end] == g-48)
-			printf("correct,出生年月为：%d年%d月%d日\n", y, mo, ri);
-		else
-			printf("wrong\n");
-		printf("若继续请输入Y，否则输入N\n");
-		scanf("%c", &judge);
-		getchar();
-		while (judge != 'Y' && judge != 'N')
-		{
-			printf("请输入Y或N!\n");
-			scanf("%c", &judge);
-			getchar();
-		}
-	}
-		return 0;
-}
+//#include <stdio.h>
+//int main()
+//{
+//	int sum = 0; int a, b, c, d, e, f, h, i, j, k, l, m, n, o, p, q, r; char g;
+//	char str[11] = { 1,0,'x',9,8,7,6,5,4,3,2 };
+//	char judge='Y';
+//	while (judge == 'Y')
+//	{
+//		scanf("%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%c", &a, &b, &c, &d, &e, &f,&h,&i,&j,&k,&l,&m,&n,&o,&p,&q,&r,&g);
+//		getchar();
+//		sum += (7 * a + 9 * b + 10 * c+ 5 * d + 8 * e + 4 * f + 2 *h + i + 6 * j + 3 * k + 7 * l + 9 * m + 10 * n + 5 * o + 8 * p  + 4 * q + 2 * r);
+//		int end = sum % 11;
+//		int y =h*1000+i*100+j*10+k , mo =l*10+m , ri =n*10+o ;
+//		if (str[end] == g-48)
+//			printf("correct,出生年月为：%d年%d月%d日\n", y, mo, ri);
+//		else
+//			printf("wrong\n");
+//		printf("若继续请输入Y，否则输入N\n");
+//		scanf("%c", &judge);
+//		getchar();
+//		while (judge != 'Y' && judge != 'N')
+//		{
+//			printf("请输入Y或N!\n");
+//			scanf("%c", &judge);
+//			getchar();
+//		}
+//	}
+//		return 0;
+//}
 //#include <stdio.h>
 //#include <string.h>
 //void sorted(char(*a)[15], int n);
@@ -224,4 +224,20 @@ int main()
 //	}
 //	if (flag == 0)
 //		printf("没有找到这个城市！\n");
+//}
+//int main()
+//{
+//	int n = 2;
+//	while (n--);
+//
+//	printf("%d", n);
+//}
+//#define a 3.5
+//#define s(x) a*x*x
+//const double PI = acos(-1);
+//int main()
+//{
+//	double a;
+//	scanf("%lf", &a);
+//	printf("%.2lf %.2lf",sin(a*PI/180),cos(a*PI/180) );
 //}
