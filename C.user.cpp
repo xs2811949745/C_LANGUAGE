@@ -101,11 +101,12 @@ void del(int a[], int n, int i)  /*删除数组a中下标为i的元素*/
 void PrintArr(int a[], int n)/*输出数组a的前n个元素*/
 {
 	int x;
-	for (x = 0; x <=n -1; x++)
-		printf("%d ", a[x]);
+	printf("%d", a[0]);
+	for (x = 1; x <=n -1; x++)
+		printf(" %d", a[x]);
 	
 }
-void sort(int a[], int n) {
+int sort(int a[], int n) {
 	int i, j, t;
 	for (i = 0; i < n - 1; i++) {
 		for (j = i + 1; j < n; j++) {
@@ -118,4 +119,14 @@ void sort(int a[], int n) {
 		}
 	}
 	return 0;
+}
+
+int IsLeap_year(int n)
+{
+	int flag = 0;
+	if (n % 4 == 0 && n % 100 != 0)
+		flag = 1;
+	if (n % 400 == 0)
+		flag = 1;
+	return flag;
 }
