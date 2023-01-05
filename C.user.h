@@ -25,3 +25,5 @@ void del(int a[], int n, int i);  /*删除数组a中下标为i的元素*/
 void PrintArr(int a[], int n); /*输出数组a的前n个元素*/
 
 int sort(int a[], int n);	/*冒泡排序（未优化）*/
+
+int IsLeap_year(int n);    /*判断是否闰年*/
